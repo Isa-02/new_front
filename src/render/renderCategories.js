@@ -2,7 +2,7 @@ import { initialState } from '../initialState';
 
 export const renderCategories = () => {
 
-    const root = document.querySelector('#root');
+    const root = document.getElementById('root');
     const cat = document.createElement("div")
     cat.classList.add("add_cat")
 

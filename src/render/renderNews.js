@@ -3,10 +3,9 @@ import initialState from "../initialState";
 
 export const render = () => {
   const root = document.getElementById("root");
-  const news_con = document.createElement("div")
+  const news_con = document.createElement("div");
 
-  news_con.classList.add("add_news")
-
+  news_con.classList.add("add_news");
 
   if (Array.isArray(initialState.news)) {
     news_con.textContent = "";
@@ -15,7 +14,7 @@ export const render = () => {
       const div = document.createElement("div");
       div.textContent = news.title;
       div.addEventListener("click", () => getNewsById(news._id));
-      news_con.append(div)
+      news_con.append(div);
       root.append(news_con);
     });
   } else {
@@ -30,7 +29,7 @@ export const render = () => {
     // comment.textContent = initialState.comments
 
     news_con.append(title, text);
-    root.append(news_con)
+    root.prepend(news_con);
   }
 };
 export default render;
